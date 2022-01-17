@@ -37,6 +37,6 @@ xfft = 20*log10(abs(xfft));
 xfft = xfft - max(xfft, [], 1);
 
 Fs = Fs/R;
-freq = (Fs/N_FFT:Fs/N_FFT:Fs)'; freq = freq - Fs/2;
+freq = ((0:N_FFT - 1) - (N_FFT / 2))'*(Fs/N_FFT);
 plot(freq, xfft); grid minor;
 xlim([freq(1, 1) freq(end, 1)]); ylim([-140 5])
