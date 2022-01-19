@@ -1,5 +1,7 @@
 function [ do ] = int_comb( di, bw, trunc, mode )
 
+    disp(['Entered "int_comb". bw = ',num2str(bw),', trunc = ',num2str(trunc)]);
+
 	len = size(di, 1);
 	do = zeros(len, 1);
 	
